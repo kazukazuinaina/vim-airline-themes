@@ -3,9 +3,6 @@
 Execute (validate themes):
   let themes = readfile('themes.txt')
   call sort(themes)
-  if v:version > 800
-    let err_proc = v:false
-  endif
   try
 
     for themePath in themes
@@ -30,9 +27,6 @@ Execute (validate themes):
     endfor
 
   catch
-    if v:version > 800
-      let err_proc = v:true
-    endif
     Log "Failed validation testing with exception:"
     Log string(v:exception)
   endtry
