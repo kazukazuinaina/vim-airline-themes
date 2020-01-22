@@ -1,4 +1,4 @@
-language: vim
+language: generic
 
 cache:
   directories:
@@ -9,6 +9,7 @@ env:
   - VIM_VERSION=8.1.1280
   - VIM_VERSION=8.1.0000
   - VIM_VERSION=8.0.0000
+  - VIM_VERSION=7.4
 
 before_install:
   - curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup; true
@@ -22,7 +23,7 @@ before_script: |
   find $PWD/autoload/airline/themes -name "*.vim" > themes.txt
 
 script: |
-  vim --not-a-term -Nu <(cat << VIMRC
+  vim -Nu <(cat << VIMRC
   filetype off
   set rtp+=vader.vim
   set rtp+=vim-airline
