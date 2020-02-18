@@ -9,7 +9,7 @@ build: off
 
 test_script:
   - |
-    vim --not-a-term -Nu <(cat << VIMRC
+    vim --not-a-term -Nu <(echo << VIMRC
     filetype off
     set rtp+=vader.vim
     set rtp+=vim-airline
