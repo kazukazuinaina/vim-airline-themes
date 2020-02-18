@@ -5,7 +5,6 @@ before_script:
   - git clone https://vim-airline/vim-airline.git
   - where /r autoload/airline/themes . *.vim > themes.txt
 
-
 build: off
 
 before_test:
