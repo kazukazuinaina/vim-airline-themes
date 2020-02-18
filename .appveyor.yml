@@ -1,16 +1,13 @@
 # https://www.appveyor.com/docs/lang/ruby/
 
-before_script:
+build_script:
   - git clone https://github.com/junegunn/vader.vim.git
   - git clone https://vim-airline/vim-airline.git
-    #- where /r autoload/airline/themes . *.vim > themes.txt
+   - where /r autoload/airline/themes . *.vim > themes.txt
 
 build: off
 
-before_test:
-  - vim --version
-
-script:
+test_script:
   - |
     vim --not-a-term -Nu <(cat << VIMRC
     filetype off
