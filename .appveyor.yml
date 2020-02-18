@@ -1,0 +1,24 @@
+# https://www.appveyor.com/docs/lang/ruby/
+
+before_script:
+  - git clone https://github.com/junegunn/vader.vim.git
+  - git clone https://vim-airline/vim-airline.git
+  - where /r autoload/airline/themes . *.vim > themes.txt
+
+
+build: off
+
+before_test:
+  - vim --version
+
+script:
+  - |
+    vim --not-a-term -Nu <(cat << VIMRC
+    filetype off
+    set rtp+=vader.vim
+    set rtp+=vim-airline
+    set rtp+=.
+    set rtp+=after
+    filetype plugin indent on
+    syntax enable
+    VIMRC) -c 'Vader! test/*' > /dev/null
