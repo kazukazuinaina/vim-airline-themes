@@ -3,7 +3,7 @@
 before_script:
   - git clone https://github.com/junegunn/vader.vim.git
   - git clone https://vim-airline/vim-airline.git
-  - where /r autoload/airline/themes . *.vim > themes.txt
+    #- where /r autoload/airline/themes . *.vim > themes.txt
 
 build: off
 
