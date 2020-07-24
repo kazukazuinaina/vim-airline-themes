@@ -19,6 +19,7 @@ Execute (validate themes):
       normal! :
       normal! R
       normal! v
+      normal! :term
       setlocal mod
       normal! i
       normal! :
