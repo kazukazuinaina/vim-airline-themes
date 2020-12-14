@@ -19,6 +19,8 @@ jobs:
         - 'v8.2.0000'
         - 'v8.1.0000'
         - 'v8.0.0000'
+        download:
+          - 'never'
 
     steps:
     - name: Checkout code
