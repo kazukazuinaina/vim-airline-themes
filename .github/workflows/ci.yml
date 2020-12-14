@@ -25,7 +25,7 @@ jobs:
     - name: Setup Vim
       uses: rhysd/action-setup-vim@v1
       with:
-        vim_version: ${{ matrix.vim }}
+        version: ${{ matrix.vim }}
 
     - name: Install Dependencies
       run: | 
