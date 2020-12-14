@@ -24,7 +24,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: Setup Vim
       uses: thinca/action-setup-vim@v1
